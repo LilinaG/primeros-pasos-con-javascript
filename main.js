@@ -41,25 +41,29 @@ console.log(fullname);
 
 // Crear una función que imprima mensaje "Hola, [nombre]" con un parámetro para el nombre."
 
-
-function saludar(nombre) {
-   return "Hola" + nombre;
-}
-saludar("Liliana");
+function saludar(name) {
+    let mensaje = "Hola, " + name;
+    console.log(mensaje);
+  }
+  const saludo = saludar("Liliana");
   
 
 //Crear función que reciba como parámetros 2 números y que devuelva la suma de ellos 
 
-function suma (numero1, numero2){
-    let resultado = numero1 + numero2
-    return resultado
+function suma(a=5, b=5){
+    return a + b;
 }
-suma(10, 12)
+const resultado = suma();
+console.log(resultado);
+
+
+
 //Crear función que determine si un número es par o impar.
-let numero;
-numero = prompt("Introducir numero")
-if(numero % 2 == 0)
-document.write("El número" + numero + "es par")
-else{
-    document.write("El número"+ numero+ "es impar")
+let numero; //Primero se declara la variable llamada número.
+numero = prompt("Introducir numero") // Con prompt se muestra una ventana emergente, solicitando al usuario que introduzca un número y ese número ingresado se asigna a la variable "número"creada.
+if(numero % 2 == 0) // Se verifica si el numero ingresado es divisible por dos utilizando el operador %. Si el resto de la división es igual a 0 entonces es un número par.
+document.write("El número" + numero + "es par")// Si el número es par, se utiliza el método de "document.write() para mostrar en el navegador el mensaje "El numero[] es par.
+else{ //si el número no es par, es decir el resto de la división no es cero, se ejecuta el bloque de código dentro del "else" y se mostraría el mensaje "El número es impar"
+    document.write("El número" + numero+ "es impar")
 }
+
