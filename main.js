@@ -67,3 +67,16 @@ else{ //si el número no es par, es decir el resto de la división no es cero, s
     document.write("El número" + numero+ "es impar")
 }
 
+// Crear un objeto coche haciendo la abstracción de sus atributos y un objeto anidado.
+
+const coche = {
+    marca: "volkswagen",
+    modelo: "golf",
+    color: "blanco",
+    condutor: {
+        nombre: "raul",
+        edad: 40,
+    }
+}
+console.log(coche);
+// Crear una función que devuelva la marca del carro.
