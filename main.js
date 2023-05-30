@@ -61,11 +61,11 @@ console.log(resultado);
 
 
 //Crear función que determine si un número es par o impar.
-let numero; //Primero se declara la variable llamada número.
-numero = prompt("Introducir numero") // Con prompt se muestra una ventana emergente, solicitando al usuario que introduzca un número y ese número ingresado se asigna a la variable "número"creada.
-if(numero % 2 == 0) // Se verifica si el numero ingresado es divisible por dos utilizando el operador %. Si el resto de la división es igual a 0 entonces es un número par.
-document.write("El número" + numero + "es par")// Si el número es par, se utiliza el método de "document.write() para mostrar en el navegador el mensaje "El numero[] es par.
-else{ //si el número no es par, es decir el resto de la división no es cero, se ejecuta el bloque de código dentro del "else" y se mostraría el mensaje "El número es impar"
+let numero; 
+numero = prompt("Introducir numero"); 
+if(numero % 2 == 0) 
+document.write("El número" + numero + "es par");
+else{ 
     document.write("El número" + numero+ "es impar")
 }
 
@@ -123,8 +123,8 @@ console.log(números);
 
 // Crear una función que imprima en consola todos los números de un array (Investigar ciclo for)
 
-function mostrarNumeros(array) {   // Se crea una función que tiene por parámetro un array. La función nos imprimirá en consola todos los números del array que le pasemos.
-    for (let i = 0; i < array.length; i++) {       // Con el ciclo for podemos recorrer todos los elementos del array. i < array.length verifica si el índice i es menor que la longitud del array. Si la condición es verdadera, se ejecuta. 
+function mostrarNumeros(array) {   
+    for (let i = 0; i < array.length; i++) {       
         console.log(array[i]);
     }
 }
@@ -143,7 +143,7 @@ console.log (números);
 let numeros2 = [2, 4, 9, 13, 10, 12, 14, 16, 18, 20];
 
 function quitarPares(array) {
-    let numerosImpares = array.filter(numero => numero % 2 !== 0);// verifica si cada número no es divisible por 2. Si la expresión numero % 2 !== 0
+    let numerosImpares = array.filter(numero => numero % 2 !== 0);
     return numerosImpares;
 }
 let numerosPares = quitarPares(numeros2);
@@ -205,7 +205,281 @@ console.log(friendsMayusculas);
 
 // Crear un botón en HTML y usar JavaScript para mostrar un mensaje cuando se hace clic.
 
-const button = document.getElementById("boton");
-button.addEventListener('click', function() {
-    alert('¡Lo has conseguido!');
-  });
+/*let myButton = document.getElementById("myButton");
+    myButton.addEventListener("click", function() {
+        console.log("Se ha hecho clic en el botón");
+});*/
+
+
+
+// Cambiar el contenido de un elemento HTML mediante JavaScript.
+
+/*let paragraph = document.getElementById("myParagraph");
+paragraph.textContent = "Nuevo texto";
+console.log(paragraph.textContent);*/
+
+// Ocultar y mostrar elementos HTML utilizando JavaScript.
+
+
+// Crear un array de 10 nombres.
+
+let ciudades = ["Madrid", "Barcelona", "Valencia", "Sevilla", "Bilbao", "Málaga", "Alicante", "Granada", "Palma de Mallorca", "Zaragoza"];
+console.log(ciudades);
+
+// Crear una función que imprima en pantalla una lista con los nombres del array.
+
+let ciudades2 = ["Madrid", "Barcelona", "Valencia", "Sevilla", "Bilbao", "Málaga", "Alicante", "Granada", "Palma de Mallorca", "Zaragoza"];
+
+    
+function imprimirCiudades() {
+    let listaCiudades = document.getElementById("listaCiudades");
+    let tituloCiudades = document.getElementById("tituloCiudades");
+  
+    for (let i = 0; i < ciudades2.length; i++) {
+      let ciudad = document.createElement("li");
+      ciudad.textContent = ciudades2[i]; 
+    }
+  }
+  imprimirCiudades();
+  console.log(ciudades2);
+
+// Crear un array de números.
+
+let edadSocios = [25, 32, 45, 37, 28, 50, 42, 29, 33, 39];
+console.log(edadSocios);
+
+// Crear una función que imprima en pantalla cuántos números tiene el array de números.
+
+let edadSocios2 = [25, 32, 45, 37, 28, 50, 42, 29, 33, 39];
+console.log(edadSocios2.length);
+
+// Crea los nodos necesarios para imprimir un formulario.
+
+let form = document.createElement("form");
+let nameLabel = document.createElement("label");
+let nameInput = document.createElement("input");
+let emailLabel = document.createElement("label");
+let emailInput = document.createElement("input");
+let submitButton = document.createElement("button");
+
+form.setAttribute("id", "myForm");
+nameLabel.textContent = "Nombre";
+emailLabel.textContent = "Email";
+submitButton.textContent = "Enviar";
+
+form.appendChild(nameLabel);
+form.appendChild(nameInput);
+form.appendChild(emailLabel);
+form.appendChild(emailInput);
+form.appendChild(submitButton);
+
+document.body.appendChild(form);
+
+console.log(form);
+console.log(nameLabel);
+console.log(emailLabel);
+console.log(submitButton);
+
+// Crea los nodos necesarios para crear una tabla.
+
+
+let table = document.createElement("table");
+let thead = document.createElement("thead");
+let tbody = document.createElement("tbody");
+
+
+let headerRow = document.createElement("tr");
+
+
+let headerCell1 = document.createElement("th");
+headerCell1.textContent = "Encabezado 1";
+
+let headerCell2 = document.createElement("th");
+headerCell2.textContent = "Encabezado 2";
+
+
+headerRow.appendChild(headerCell1);
+headerRow.appendChild(headerCell2);
+
+
+thead.appendChild(headerRow);
+
+
+let dataRow1 = document.createElement("tr");
+
+
+let dataCell1 = document.createElement("td");
+dataCell1.textContent = "Dato 1";
+
+let dataCell2 = document.createElement("td");
+dataCell2.textContent = "Dato 2";
+
+
+dataRow1.appendChild(dataCell1);
+dataRow1.appendChild(dataCell2);
+
+
+tbody.appendChild(dataRow1);
+
+
+table.appendChild(thead);
+table.appendChild(tbody);
+
+
+document.body.appendChild(table);
+
+console.log(table);
+console.log(thead);
+console.log(tbody);
+
+
+
+
+// Crea array de objetos 10 objetos con su respectivos key:value. Cada objeto deberá tener las siguientes
+
+let mascotas = [
+    {
+      id: 1,
+      name: "Lola",
+      status: "vivo",
+      species: "gato",
+      type: "común",
+      gender: "femenino",
+    },
+    {
+      id: 2,
+      name: "Harley",
+      status: "vivo",
+      species: "perro",
+      type: "Border Collie",
+      gender: "femenino",
+    },
+    {
+      id: 3,
+      name: "Trasgu",
+      status: "muerto",
+      species: "agaporni",
+      type: "pájaro",
+      gender: "masculino",
+    },
+    
+    {
+        id: 4,
+        name: "Dexter",
+        status: "vivo",
+        species: "perro",
+        type: "Border Collie",
+        gender: "masculino",
+      },
+      {
+        id: 5,
+        name: "Tofu",
+        status: "vivo",
+        species: "perro",
+        type: "Border Collie",
+        gender: "masculino",
+      },
+      {
+        id: 6,
+        name: "Jamaica",
+        status: "vivo",
+        species: "perro",
+        type: "Border Collie",
+        gender: "femenino",
+      },
+
+      {
+        id: 7,
+        name: "Chester",
+        status: "vivo",
+        species: "perro",
+        type: "Border Collie",
+        gender: "masculino",
+      },
+      {
+        id: 8,
+        name: "Mini",
+        status: "muerto",
+        species: "gato",
+        type: "común",
+        gender: "femenino",
+      },
+      {
+        id: 9,
+        name: "Ron",
+        status: "vivo",
+        species: "perro",
+        type: "Pastor Alemán",
+        gender: "masculino",
+      },
+      {
+        id: 10,
+        name: "Darkness",
+        status: "muerto",
+        species: "gato",
+        type: "Siamés",
+        gender: "femenino",
+      },
+  ];
+
+ console.log(mascotas);
+
+
+
+ 
+
+  
+//   Imprime cada elemento del objeto dentro de la tabla que creaste anteriormente.
+
+
+/*
+function generarTabla() {
+    var body = document.getElementsByTagName("body")[0];
+    var tabla = document.createElement("table");
+    var tblBody = document.createElement("tbody");
+  
+    for (var i = 0; i < teachers.length; i++) {
+      var teacher = teachers[i];
+      
+      var hilera = document.createElement("tr");
+      
+      var celdaId = document.createElement("td");
+      var textoId = document.createTextNode(teacher.id);
+      celdaId.appendChild(textoId);
+      hilera.appendChild(celdaId);
+  
+      var celdaNombre = document.createElement("td");
+      var textoNombre = document.createTextNode(teacher.name);
+      celdaNombre.appendChild(textoNombre);
+      hilera.appendChild(celdaNombre);
+  
+      var celdaEstado = document.createElement("td");
+      var textoEstado = document.createTextNode(teacher.status);
+      celdaEstado.appendChild(textoEstado);
+      hilera.appendChild(celdaEstado);
+  
+      var celdaEspecie = document.createElement("td");
+      var textoEspecie = document.createTextNode(teacher.species);
+      celdaEspecie.appendChild(textoEspecie);
+      hilera.appendChild(celdaEspecie);
+  
+      var celdaTipo = document.createElement("td");
+      var textoTipo = document.createTextNode(teacher.type);
+      celdaTipo.appendChild(textoTipo);
+      hilera.appendChild(celdaTipo);
+  
+      var celdaGenero = document.createElement("td");
+      var textoGenero = document.createTextNode(teacher.gender);
+      celdaGenero.appendChild(textoGenero);
+      hilera.appendChild(celdaGenero);
+  
+      tblBody.appendChild(hilera);
+    }
+  
+    tabla.appendChild(tblBody);
+    
+    tabla.setAttribute("border", "1");
+    
+    body.appendChild(tabla); */
+
+    
