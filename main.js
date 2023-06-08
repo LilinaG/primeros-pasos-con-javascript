@@ -41,13 +41,12 @@ console.log(fullname);
 
 // Crear una función que imprima mensaje "Hola, [nombre]" con un parámetro para el nombre."
 
-function saludar(nombre, mensaje) {
-    nombre = "Raúl"
-    mensaje = "Hola, ${nombre}";
-    return mensaje 
+function saludar(nombre) {
+    let mensaje = "Hola, " + nombre;
+    console.log(mensaje);
+    document.write(mensaje + "<br>");
   }
-  
-  console.log(saludar());
+saludar("Raúl");
   
 
 //Crear función que reciba como parámetros 2 números y que devuelva la suma de ellos 
@@ -205,11 +204,9 @@ console.log(friendsMayusculas);
 
 // Crear un botón en HTML y usar JavaScript para mostrar un mensaje cuando se hace clic.
 
-/*let myButton = document.getElementById("myButton");
-    myButton.addEventListener("click", function() {
-        console.log("Se ha hecho clic en el botón");
-});*/
-
+function saludar() {
+    alert("Hello World!");
+  };
 
 
 // Cambiar el contenido de un elemento HTML mediante JavaScript.
