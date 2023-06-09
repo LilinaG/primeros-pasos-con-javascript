@@ -41,32 +41,34 @@ console.log(fullname);
 
 // Crear una función que imprima mensaje "Hola, [nombre]" con un parámetro para el nombre."
 
-function saludar(nombre) {
-    let mensaje = "Hola, " + nombre;
-    console.log(mensaje);
-    document.write(mensaje + "<br>");
+function saludar(nombre){
+  let saludo = `Buenos días ${nombre}`;
+  console.log(saludo);
   }
-saludar("Raúl");
+  saludar("Ramon");
   
 
 //Crear función que reciba como parámetros 2 números y que devuelva la suma de ellos 
 
-function suma(a=5, b=5){
-    return a + b;
+function sumar(a, b){
+  console.log(a+b);
+  return(a+b);
 }
-const resultado = suma();
-console.log(resultado);
-
-
+sumar(23, 50);
 
 //Crear función que determine si un número es par o impar.
-let numero; 
-numero = prompt("Introducir numero"); 
-if(numero % 2 == 0) 
-document.write("El número" + numero + "es par");
-else{ 
-    document.write("El número" + numero+ "es impar")
+
+function determinarParoImpar(numero){
+  if (numero % 2 == 0) {
+      let respuesta_par = `El ${numero} es par`;
+      return respuesta_par;
+  }
+  else{
+      let respuesta_impar = `El ${numero} es impar`;
+      return respuesta_impar;
+  }
 }
+console.log(determinarParoImpar(11));
 
 // Crear un objeto coche haciendo la abstracción de sus atributos y un objeto anidado.
 
@@ -141,12 +143,25 @@ console.log (números);
 // Crear una función que elimine los números pares de ese array.
 let numeros2 = [2, 4, 9, 13, 10, 12, 14, 16, 18, 20];
 
-function quitarPares(array) {
+/*function quitarPares(array) {
     let numerosImpares = array.filter(numero => numero % 2 !== 0);
     return numerosImpares;
 }
 let numerosPares = quitarPares(numeros2);
-console.log(numerosPares);
+console.log(numerosPares);*/
+
+function eliminarPares(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      array.splice(i, 1);
+      i--; 
+  }
+  return array;
+}
+}
+let numerosSinPares = eliminarPares(numeros2);
+console.log(eliminarPares);
+
 
 // Crear una función que devuelva el número mayor de un array.
 
@@ -214,6 +229,12 @@ function saludar() {
 /*let paragraph = document.getElementById("myParagraph");
 paragraph.textContent = "Nuevo texto";
 console.log(paragraph.textContent);*/
+
+
+
+let p = document.getElementById("myParagrah")
+p.innerText = "Esto cambia el parráfo"
+console.log(p);
 
 // Ocultar y mostrar elementos HTML utilizando JavaScript.
 
